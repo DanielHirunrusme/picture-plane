@@ -1,0 +1,39 @@
+//-webkit-overflow-scrolling: touch; /* lets it scroll lazy */
+
+%scroll-container {
+	-webkit-overflow-scrolling: touch;
+	 overflow-y: scroll;
+}
+
+#barba-wrapper {
+	position: absolute;
+    width: 100%;
+    z-index: 98;
+    height: 100%;
+	top:0;
+	left:0;
+	
+	@include respond-to(mobile-portrait) {
+		@include transition(.4s opacity);
+	}
+	
+	@include respond-to(mobile-landscape) {
+		@include transition(.4s opacity);
+	}
+	
+	&.mobile-menu {
+		@include opacity(.2);
+	}
+	
+	@include respond-to(mobile-portrait) {
+		position: relative;
+		height:auto;
+		width:auto;
+	}
+	
+	@include respond-to(mobile-landscape) {
+		position: relative;
+		height:auto;
+		width:auto;
+	}
+}

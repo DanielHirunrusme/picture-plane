@@ -1,0 +1,24 @@
+.show-index {
+	main {
+		//display:none;
+		//@include opacity(0);
+	}
+}
+
+main {
+	//@include transition(.1s opacity);
+	//@include opacity(0);
+	margin-left:$g-lr-margin;
+	
+	@include respond-to(mobile-portrait) {
+		margin-left:$g-mobile-lr-margin;
+	}
+	
+	@include respond-to(mobile-landscape) {
+		margin-left:$g-mobile-lr-margin;
+	}
+	
+	p {
+		line-height:1.3;
+	}
+}

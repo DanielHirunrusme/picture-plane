@@ -1,0 +1,23 @@
+.page-error {
+	
+	background:url('../images/error_bg.jpg') no-repeat center center;
+	background-size:cover;
+	background-blend-mode: overlay;
+	background-blend-mode: luminosity;
+	background-color:rgb(219, 194, 120);
+	height:100vh;
+	
+	header {
+		display:none;
+	}
+	
+	main {
+		header {
+			display:block;
+			
+			span {
+				margin-left:1em;
+			}
+		}
+	}
+}

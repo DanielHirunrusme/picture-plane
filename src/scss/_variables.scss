@@ -1,0 +1,174 @@
+//global
+$g-size:13px;
+$g-laptop-size:11px;
+$g-phone-size:12px;
+$g-mobileonly-size:4vw;
+$g-font:'Unica-Medium';
+//$g-unit:1.4285;
+$g-unit:20px;
+
+//breakpoints
+$break-desktop:1441px;
+$break-laptop:1440px;
+$break-ipad:767px;
+$break-phone:767px;
+
+//animation
+$nav-transition-duration:1s;
+$transition-duration:.4s;
+$zoom-transition-duration:1.2s;
+$transition-timing-function: ease-out;
+$animation-speed: 0.2s;
+
+//gutters+margins
+$padding:20px;
+
+$g-lr-margin:2vw;
+$g-tb-margin:3vh;
+
+$g-mobile-lr-margin:6vw;
+$g-mobile-tb-margin:3vh;
+
+$g-padding-v:10%;
+$g-padding-h:10%;
+
+$g-h-padding:5vw;
+$g-v-padding:4vh;
+
+//colors
+$c-white:#ffffff;
+$c-black:#000000; 
+$c-background:#E6CEBE;
+$c-gray:rgb(40, 40, 40);
+$c-blue:rgb(42, 40, 120);
+$c-dark-gray:#282924;
+$c-orange:rgb(255, 80, 0);
+$c-overlay-blue:#092647;
+$c-deactivated-text:#919191;
+$c-global:$c-dark-gray;
+
+//font sizes
+$f-global-size:2vw;
+$f-line-height:2.2857vw;
+
+$f-body-global-size:2.8vw;
+$f-body-line-height:3vw;
+
+$f-a-global-size:2.36vw;
+
+$f-global-size-sm:1.675vw;
+
+$f-tablet-size:1em;
+$f-mobileonly-size:3em;
+
+
+$f-name-mobileonly-size:7em;
+
+
+$a-font-sizes: (
+  null  : $f-a-global-size,
+  $break-ipad : $f-a-global-size,
+  $break-laptop : $f-a-global-size,
+  $break-desktop: $f-a-global-size
+);
+
+$p-font-sizes: (
+  null  : 20px,
+  $break-ipad : 20px,
+  $break-laptop : 20px,
+  $break-desktop: 28px
+);
+
+$p-line-height: (
+  null  : 25px,
+  $break-ipad : 25px,
+  $break-laptop : 25px,
+  $break-desktop: 36px
+);
+
+/*
+$body-font-sizes: (
+  null  : 3.4285vw,
+  $break-ipad : 1.4285vw,
+  $break-laptop : 1.4285vw,
+  $break-desktop: 1.4285vw
+);
+
+$body-line-height: (
+  null  : 3.5714vw,
+  $break-ipad : 1.5714vw,
+  $break-laptop : 1.4285vw,
+  $break-desktop: 1.4285vw
+);
+*/
+
+$body-font-sizes: (
+  null  : 16px,
+  $break-ipad : 1.8142vw,
+  $break-laptop : 1.8142vw,
+  $break-desktop: 1.8142vw
+);
+
+$body-line-height: (
+  null  : 18px,
+  $break-ipad : 1.1,
+  $break-laptop : 1.1,
+  $break-desktop: 1.1
+);
+
+$body-small-font-sizes: (
+  null  : 22px,
+  $break-ipad : 1vw,
+  $break-laptop : 1vw,
+  $break-desktop: 1vw
+);
+
+$body-small-line-height: (
+  null  : 18px,
+  $break-ipad : 1.1,
+  $break-laptop : 1.1,
+  $break-desktop: 1.1
+);
+
+
+$h1-font-sizes: (
+  null  : 14px,
+  $break-ipad : 1.523vw,
+  $break-laptop : 1.523vw,
+  $break-desktop: 1.523vw
+);
+
+$h1-line-height: (
+  null  : 18px,
+  $break-ipad : 1.1,
+  $break-laptop : 1.1,
+  $break-desktop: 1.1
+);
+
+
+@mixin line-height($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      line-height: $fs-font-size;
+    }
+    @else {
+      @media screen and (min-width: $fs-breakpoint) {
+        line-height: $fs-font-size;
+      }
+    }
+  }
+}
+
+//breakpoints
+@mixin font-size($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size;
+    }
+    @else {
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}

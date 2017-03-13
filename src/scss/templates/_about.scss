@@ -1,0 +1,124 @@
+/*
+*	About works as a partial and as its own page incase the user has JS disabled
+*
+*/
+
+.about-section {
+	width:50vw;
+	min-width:500px;
+	
+	@include respond-to(mobile-portrait) {
+		width:auto;
+		min-width:auto;
+	}
+	
+	@include respond-to(mobile-landscape) {
+		width:auto;
+		min-width:auto;
+	}
+}
+
+.page-about {
+	
+	
+	#site-index {
+		//display:block;
+		
+		nav {
+			display:none;
+		}
+		
+		.about-section {
+			display:block;
+		}
+		
+		aside {
+			.full-project-images {
+				.aside-project-image {
+					display:none;
+				}
+			}
+			
+		}
+		
+	}
+	
+	header {
+		a {
+			//cursor:text;
+		}
+	}
+	
+	#barba-wrapper {
+		display:none !important;
+	} 
+}
+
+.page-about {
+	.button--about {
+		div {
+			border-bottom:2px dotted #000;
+		}
+	}
+}
+
+.page-about {
+	
+	@include respond-to(mobile-portrait) {
+		header {
+			top:0;
+		}
+	}
+	
+	@include respond-to(mobile-landscape) {
+		header {
+			top:0;
+		}
+	}
+	
+	
+	.button--about {
+		@include respond-to(mobile-portrait) {
+			display:none;
+		}
+		
+		@include respond-to(mobile-landscape) {
+			display:none;
+		}
+		
+	}
+}
+
+.page-about.show-index {
+	
+	#site-index {
+		display:block;
+		
+		nav {
+			display:block;
+		}
+		
+		h1 span {
+			@include opacity(0);
+		}
+		
+		.about-section {
+			display:none;
+		}
+		
+	}
+	
+	.button--about {
+		div {
+			border-color:transparent;
+		}
+		
+		&:hover {
+			div {
+				border-color:#000;
+			}
+		}
+	}
+	
+	
+}

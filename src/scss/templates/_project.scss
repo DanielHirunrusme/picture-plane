@@ -1,0 +1,218 @@
+.page-project {
+	main {
+		position: absolute;
+	    width: 100%;
+	    height: 100%;
+		margin:0;
+		
+		@include respond-to(mobile-portrait) {
+			margin:$g-mobile-tb-margin $g-mobile-lr-margin;
+			position:relative;
+			width:auto;
+			height:auto;
+		}
+		
+		@include respond-to(mobile-landscape) {
+			margin:$g-mobile-tb-margin $g-mobile-lr-margin;
+			position:relative;
+			width:auto;
+			height:auto;
+		}
+		
+		.project-information {
+			@include transition(.1s opacity);
+			@extend .noselect;
+			position:absolute;
+			bottom:$g-tb-margin;
+			left:30vw;
+			z-index:2;
+			@include opacity(1);
+			pointer-events:none;
+			
+			@include respond-to(mobile-portrait) {
+				position:fixed;
+				left:30vw;
+				
+				.count {
+					display:none;
+				}
+			}
+			
+			@include respond-to(mobile-landscape) {
+				position:fixed;
+				left:30vw;
+				
+				.count {
+					display:none;
+				}
+			}
+	
+			.count {
+			    top: -.5em;
+			    position: relative;
+				
+				@include font-size($body-small-font-sizes); 
+				@include line-height($body-small-line-height); 
+				
+				span {
+					@include font-size($body-small-font-sizes); 
+					@include line-height($body-small-line-height); 
+				}
+			}
+		}
+
+		.project-images {
+			//background:url(../images/arrow.png);
+			position:absolute;
+			width:100%;
+			height:100%;
+			top:0;
+			left:0;
+			z-index:1;
+			
+			@include respond-to(mobile-portrait) {
+				//margin:$g-mobile-tb-margin $g-mobile-lr-margin;
+				position:relative;
+				width:auto;
+				height:auto;
+				margin-bottom:$g-mobile-tb-margin * 4;
+			}
+			
+			
+			@include respond-to(mobile-landscape) {
+				//margin:$g-mobile-tb-margin $g-mobile-lr-margin;
+				position:relative;
+				width:auto;
+				height:auto;
+				margin-bottom:$g-mobile-tb-margin * 4;
+			}
+			
+			&.next-image {
+				cursor:url("../images/arrow.png") 45 10, auto;
+			}
+			
+			&.on-last {
+				cursor:url("../images/close.png") 17 17, auto;
+			}
+			
+			
+			
+			figure {
+				
+				text-align:center;
+				position:absolute;
+				background-blend-mode: overlay;
+				background-blend-mode: luminosity;
+				background-size:cover;
+				background-position:center center;
+				background-repeat:no-repeat;
+				@include opacity(0);
+				will-change: width, height, left, top, background, right, transform;
+				
+				@include respond-to(mobile-portrait) {
+					position:relative;
+					width:100% !important;
+					height:auto !important;
+					top:auto !important;
+					right:auto !important;
+					margin-bottom:$g-mobile-tb-margin * 2;
+					@include opacity(1);
+					
+					img {
+						width:100% !important;
+					}
+				}
+				
+				@include respond-to(mobile-landscape) {
+					position:relative;
+					width:100% !important;
+					height:auto !important;
+					top:auto !important;
+					right:auto !important;
+					margin-bottom:$g-mobile-tb-margin * 2;
+					@include opacity(1);
+					
+					img {
+						width:100% !important;
+					}
+				}
+
+				&.hidden {
+					@include opacity(0);
+				}
+				
+				&.load {
+					@include opacity(1);
+				}
+				
+				&.show {
+					@include transition(.8s all);
+					transition-property: width, height, left, top, background, right, transform;
+					
+					//@include transition(2s width);
+					//@include transition(2s height);
+					//@include opacity(1);
+					background-color:transparent !important;
+				}
+				
+				&.index {
+					@include transition(.4s all);
+					//background-color:inherit !important;
+				}
+				
+				img {
+					@include opacity(0)
+				}
+				
+				&.figure-portrait {
+					height:80%;
+					
+					img {
+						//@include opacity(0);
+						height:100%;
+						
+						&.show {
+							//@include opacity(1);
+						}
+					}
+				}
+				
+				&.figure-landscape {
+					width:50vw;
+					
+					img {
+						width:100%;
+					}
+				}
+		
+				
+			}
+		}
+	}
+}
+
+
+.show-index {
+	main {
+		.project-information {
+			@include opacity(0);
+		}
+	}
+	
+}
+
+
+
+.cursor {
+	position:relative;
+	pointer-events:none;
+	z-index:99999;
+	margin-left:-50px;
+	width:100px;
+	margin-top:-50px;
+	
+	svg {
+		//width:100%;
+	}
+}
+

@@ -1,0 +1,32 @@
+body, html {
+	-webkit-font-smoothing: antialiased;
+	width:100%;
+	left:0;
+}
+
+body {
+	height:100%;
+	overflow:hidden;
+	
+	@include respond-to(mobile-portrait) {
+		overflow:auto;
+	}
+	
+	@include respond-to(mobile-landscape) {
+		overflow:auto;
+	}
+}
+
+body.text {
+	cursor:text;
+}
+
+body.pointer {
+	cursor:pointer;
+}
+
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}

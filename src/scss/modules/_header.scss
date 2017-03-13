@@ -1,0 +1,76 @@
+.page-project {
+	.main-header {
+		display:block;
+	}
+	header {
+		span {
+			visibility: hidden;
+		}
+	}
+}
+
+.page-home {
+	.main-header {
+		display:block;
+	}
+}
+
+.show-index {
+	.header {
+		span {
+			@include opacity(0);
+		}
+	}
+}
+
+header {
+	width:50vw;
+    z-index: 99;
+    position: relative;
+	margin-top:$g-tb-margin;
+	margin-left:$g-lr-margin;
+	
+	@include respond-to(mobile-portrait) {
+		width:80%;
+		margin-top:$g-mobile-tb-margin;
+		margin-left:$g-mobile-lr-margin;
+		top:2px;
+		
+		span {
+			display:none;
+			br {
+				display:none;
+			}
+		}
+	}
+	
+	@include respond-to(mobile-landscape) {
+		width:80%;
+		margin-top:$g-mobile-tb-margin;
+		margin-left:$g-mobile-lr-margin;
+		top:2px;
+		
+		span {
+			display:none;
+			br {
+				display:none;
+			}
+		}
+	}
+}
+
+.page-about {
+	header {
+		@include respond-to(mobile-portrait) {
+			span {
+				display:inline;
+			}
+		}
+		
+		@include respond-to(mobile-landscape) {
+			span {
+				display:inline;
+			}
+		}
+	}
+}
