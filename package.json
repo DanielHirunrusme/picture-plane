@@ -1,7 +1,7 @@
 {
-  "name": "sophie-haig",
+  "name": "picture-plane",
   "version": "1.0.0",
-  "description": "Website for Sophie Haig",
+  "description": "Website for Picture Plane",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -52,11 +52,14 @@
     "watchify": "^3.7.0",
     "barba.js": "^1.0.0",
     "jquery-mousewheel": "3.1.13",
-    "jquery.transit": "0.9.12"
+    "jquery.transit": "0.9.12",
+	"masonry-layout": "4.1.1"
   },
   "browserify-shim": {
     "fastclick": "FastClick",
     "barba": "barba.js",
-    "jquery.transit": "transit"
+    "jquery.transit": "transit",
+	"jquery-mousewheel": "jquery-mousewheel"
+	
   }
 }

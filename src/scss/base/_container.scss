@@ -6,34 +6,132 @@
 }
 
 #barba-wrapper {
-	position: absolute;
-    width: 100%;
+	position: fixed;
+    width: 100vw;
     z-index: 98;
     height: 100%;
 	top:0;
-	left:0;
+	left:0vw;
+	@include transform(translate(100vw, 0));
+	@include transition(.2s transform);
 	
-	@include respond-to(mobile-portrait) {
-		@include transition(.4s opacity);
+	.barba-container {
+		position:absolute;
+		width:100%;
+		height:100%;
+		left:0;
+		top:0;
 	}
 	
-	@include respond-to(mobile-landscape) {
-		@include transition(.4s opacity);
-	}
+	
 	
 	&.mobile-menu {
 		@include opacity(.2);
 	}
 	
 	@include respond-to(mobile-portrait) {
-		position: relative;
-		height:auto;
-		width:auto;
+		
 	}
 	
 	@include respond-to(mobile-landscape) {
-		position: relative;
-		height:auto;
-		width:auto;
+		
 	}
+}
+
+.menu-open {
+	#barba-wrapper {
+		@include transform(translate(50vw, 0));
+		
+		@include respond-to(mobile-portrait) {
+			@include transform(translate(0vw, 0));
+		}
+	
+		@include respond-to(mobile-landscape) {
+			@include transform(translate(0vw, 0));
+		}
+	}
+}
+
+.project-opening {
+	#barba-wrapper {
+		//left:100vw;
+		//@include transform(translate(100vw, 0));
+	}
+}
+
+
+
+
+.project-open {
+	#barba-wrapper {
+		//width:100vw;
+		//left:100vw;
+		background:$c-white;
+		@include transform(translate(100px, 0));
+		
+		@include respond-to(mobile-portrait) {
+			@include transform(translate(40px, 0));
+		}
+	}
+}
+
+.project-open.hide-project {
+	#barba-wrapper {
+		@include transform(translate(100vw, 0));
+	}
+}
+
+.project-open.show-project {
+	#barba-wrapper {
+		@include transform(translate(100px, 0));
+		
+		@include respond-to(mobile-portrait) {
+			@include transform(translate(40px, 0));
+		}
+	}
+}
+
+.grid-over.show-project {
+	#barba-wrapper {
+		@include transition(.5s transform);
+		@include transform(translate(120px, 0));
+	}
+}
+
+
+.project-open {
+	#barba-wrapper.bounce {
+		-webkit-animation: bounce .5s;
+		animation: bounce .5s;
+	
+		@include respond-to(mobile-portrait) { 
+			-webkit-animation: mobile-bounce .5s;
+			animation: mobile-bounce .5s;
+		}
+	}
+}
+
+
+@-webkit-keyframes bounce {
+  0%       {  @include transform(translate(100px, 0));  }
+  50%      {  @include transform(translate(120px, 0));  }
+  100%     {  @include transform(translate(100px, 0));  }
+}
+
+@keyframes bounce {
+  0%       {  @include transform(translate(100px, 0));  }
+  50%      {  @include transform(translate(120px, 0));  }
+  100%     {  @include transform(translate(100px, 0));  }
+}
+
+@-webkit-keyframes mobile-bounce {
+  0%       { @include transform(translate(40px, 0));  }
+  50%      { @include transform(translate(80px, 0));  }
+  100%     { @include transform(translate(40px, 0));  }
+}
+
+@keyframes mobile-bounce {
+  0%       { @include transform(translate(40px, 0));  }
+  50%      { @include transform(translate(80px, 0));  }
+  100%     { @include transform(translate(40px, 0));  }
 }

@@ -8,6 +8,7 @@ body {
 	height:100%;
 	overflow:hidden;
 	
+	/*
 	@include respond-to(mobile-portrait) {
 		overflow:auto;
 	}
@@ -15,6 +16,7 @@ body {
 	@include respond-to(mobile-landscape) {
 		overflow:auto;
 	}
+	*/
 }
 
 body.text {

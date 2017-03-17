@@ -1,13 +1,33 @@
-Title: Kirby Starterkit
+Title: Picture Plane
 
 ----
 
-Author: Bastian Allgeier GmbH
+Author: Daniel Hirunrume
 
 ----
 
-Description: This is Kirby's Starterkit.
+Description: 
 
 ----
 
-Copyright: © 2009–(date: Year) (link: http://getkirby.com text: The Kirby Team)
+Copyright: © Picture Plane 2015. All rights reserved.
+
+----
+
+Twitter: picture_plane
+
+----
+
+Instagram: picture_plane
+
+----
+
+Vimeo: https://vimeo.com/pictureplane
+
+----
+
+Email: studio@pictureplane.co.uk
+
+----
+
+Mailbox: studio@pictureplane.co.uk

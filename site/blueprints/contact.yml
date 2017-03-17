@@ -12,30 +12,27 @@ fields:
     type: title
   
   intro:
-    label: Intro
+    label: Address
     type: textarea
-    
-  contactoptions:
-    label: Contact Options
-    type: structure
-    style: table
-    fields:
-      title:
-        label: Title
-        type: text
-      icon:
-        label: Icon
-        type: image
-      text:
-        label: Text
-        type: text
-      url:
-        label: URL
-        type: text
-      linktext:
-        label: Link Text
-        type: text
   
   text:
-    label: Text
+    label: Contact Information
     type: textarea
+
+  line:
+    type: line
+  
+  map_latitude:
+    label: Latitude
+    type: text
+    width: 1/3
+
+  map_longitude:
+   label: Longitude
+   type: text
+   width: 1/3
+
+  map_zoom:
+    label: Zoom
+    type: text
+    width: 1/3

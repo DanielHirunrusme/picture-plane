@@ -1,0 +1,83 @@
+#notification {
+	@include transition(.2s background-color)
+	position:fixed;
+	top:0;
+	right:0;
+	//background-color:$c-white;
+	background-color:rgba(243, 242, 237, .8);
+	//background-color:rgba(243, 242, 237, .9);
+	width:50vw;
+	height:20%;
+	z-index:98;
+	@include flexbox;
+	@include flex-direction(column);
+	@include justify-content(center);
+	//display:none;
+	max-height:200px;
+	
+	&:hover {
+		background-color:rgba(243, 242, 237, 1);
+	}
+	
+	@include respond-to(mobile-tablet) {
+		width:100%;
+		max-height:300px;
+		//height:25%;
+		//top:auto;
+		//bottom:0;
+		//height:100px;
+	}
+	
+	@include respond-to(mobile-landscape) {
+		height:200px;
+		//height:auto;
+	}
+	
+	//min-height:240px;
+	* {
+		text-align:center;
+	}
+	
+	.text {
+		padding-top:$g-tb-margin;
+		@include flexbox;
+		@include flex-direction(column);
+		@include justify-content(center);
+		height:100%;
+		position:absolute;
+		top:0;
+		right:0;
+		width:100%;
+		height:200px;
+		
+		@include respond-to(mobile-tablet) {
+			height:150px;
+			//height:auto;
+		}
+		
+		@include respond-to(mobile-landscape) {
+			height:200px;
+			//height:auto;
+		}
+	}
+	
+	h1, h2, h3, h4, h5 {
+		margin-bottom:.3em;
+	}
+	
+	a {
+		border-bottom:1px solid #000;
+	}
+}
+
+.hide-project.project-open {
+	#notification {
+		display:block;
+	}
+}
+
+.menu-open, .project-open  {
+	#notification {
+		display:none;
+	}
+}

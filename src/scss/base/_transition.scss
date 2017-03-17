@@ -10,8 +10,8 @@
     -moz-transition:$transition;
     -o-transition:$transition;
     transition:$transition;
-	//-webkit-transition-timing-function: easeInOutCubic; /* Safari and Chrome */
-	//transition-timing-function: easeInOutCubic;
+	-webkit-transition-timing-function: easeInBack; /* Safari and Chrome */
+	transition-timing-function: easeInBack;
 }
 
 @mixin transform($transforms) {

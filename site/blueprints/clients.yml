@@ -1,0 +1,22 @@
+title: Page
+
+pages: false
+
+files: false
+
+fields:
+  title:
+    label: Title
+    type:  text
+	
+  clients:
+    label: Clients
+    type: structure
+    style: table
+    fields:
+      title:
+        label: Title
+        type: text
+      url:
+        label: URL
+        type: text

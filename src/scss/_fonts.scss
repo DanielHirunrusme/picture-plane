@@ -1,19 +1,25 @@
 @font-face {
-	font-family: 'Riccione';
-	src: url('fonts/Riccione-Light.eot');
-	src: url('fonts/Riccione-Light.eot?#iefix') format('embedded-opentype'),
-		url('fonts/Riccione-Light.woff') format('woff'),
-		url('fonts/Riccione-Light.ttf') format('truetype');
-	font-weight: 100;
-	font-style: normal;
+  font-family: "Calibre Bold";
+  font-style: normal;
+  src: local("Calibre Bold"), url("../fonts/141215082829Calibre-Bold.eot") format("embedded-opentype"), url("../fonts/141215082829Calibre-Bold.woff") format("woff");
 }
 
 @font-face {
-	font-family: 'Titling';
-	src: url('fonts/TitlingGothicFBWide-Regular.eot');
-	src: url('fonts/TitlingGothicFBWide-Regular.eot?#iefix') format('embedded-opentype'),
-		url('fonts/TitlingGothicFBWide-Regular.woff') format('woff'),
-		url('fonts/TitlingGothicFBWide-Regular.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Calibre Regular";
+  font-style: normal;
+  src: local("Calibre Regular"), url("../fonts/141215082804Calibre-Regular.eot") format("embedded-opentype"), url("../fonts/141215082804Calibre-Regular.woff") format("woff");
 }
+
+@font-face {
+	font-family: 'Calibre Italic';
+	src: url('../fonts/Calibre-RegularItalic.eot');
+	src: url('../fonts/Calibre-RegularItalic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Calibre-RegularItalic.woff') format('woff'),
+		url('../fonts/Calibre-RegularItalic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+
+
+

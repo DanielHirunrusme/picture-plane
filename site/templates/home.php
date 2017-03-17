@@ -1,7 +1,10 @@
+
 <?php snippet('header') ?>
 
-  <main class="main" role="main">
+  <main class="main" role="main" data-page="home">
     
+	<?php
+	/*
     <header class="wrap">
       <h1><?= $page->title()->html() ?></h1>
       <div class="intro text">
@@ -23,7 +26,8 @@
       </div>
       
     </section>
-
+	*/
+	?>
   </main>
 
 <?php snippet('footer') ?>

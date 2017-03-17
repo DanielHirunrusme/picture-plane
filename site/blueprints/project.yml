@@ -2,6 +2,10 @@ title: Project
 
 files:
   sortable: true
+  fields:
+    caption:
+      label: Caption
+      type: text
 
 pages: false
 
@@ -9,13 +13,27 @@ fields:
   title:
     label: Title
     type:  text
-    width: 3/4
+	
+  subtitle:
+	  label: Subtitle
+	  type: text
+	  
+  line:
+      type: line
+	
+  cover_image:
+      label: Cover
+      type: image
+  
+  line_2:
+      type: line
 
-  year:
-    label: Year
-    type:  text
-    width: 1/4
-
-  text:
-    label: Text
-    type:  textarea
+  featured_video:
+      label: Video Embed
+      type: oembed
+	  preview:    true
+      info:       false
+      cheatsheet: false
+      height:     250px
+      
+	 

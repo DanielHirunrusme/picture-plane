@@ -18,3 +18,19 @@ fields:
   copyright:
     label: Copyright
     type:  textarea
+	
+  twitter:
+    label: Twitter Handle (without @)
+    type:  text
+
+  instagram:
+    label: Instagram Handle (without @)
+    type:  text
+
+  vimeo:
+    label: Vimeo
+    type:  text
+
+  mailbox:
+    label: Email
+    type:  text

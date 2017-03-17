@@ -1,75 +1,91 @@
-.page-project {
-	.main-header {
-		display:block;
-	}
-	header {
-		span {
-			visibility: hidden;
-		}
-	}
-}
-
-.page-home {
-	.main-header {
-		display:block;
-	}
-}
-
-.show-index {
-	.header {
-		span {
-			@include opacity(0);
-		}
-	}
-}
-
-header {
-	width:50vw;
-    z-index: 99;
-    position: relative;
-	margin-top:$g-tb-margin;
-	margin-left:$g-lr-margin;
+.logo {
+	padding:$g-tb-margin $g-lr-margin 0 $g-lr-margin;
+	position:fixed;
+	top:0;
+	left:0;
+	height:40px;
+	z-index:999;
 	
 	@include respond-to(mobile-portrait) {
-		width:80%;
-		margin-top:$g-mobile-tb-margin;
-		margin-left:$g-mobile-lr-margin;
-		top:2px;
-		
-		span {
-			display:none;
-			br {
-				display:none;
-			}
-		}
+		padding:$g-tb-mobile-margin $g-lr-mobile-margin 0 $g-lr-margin/2;
+		height:30px;
 	}
 	
 	@include respond-to(mobile-landscape) {
-		width:80%;
-		margin-top:$g-mobile-tb-margin;
-		margin-left:$g-mobile-lr-margin;
-		top:2px;
+		padding:$g-tb-mobile-margin $g-lr-mobile-margin 0 $g-lr-margin;
+		height:30px;
+	}
+	
+	img {
+		height:15px;
+		margin-top:1px;
 		
-		span {
+		@include respond-to(mobile-portrait) {
+			height:12px;
+			margin-top:0px;
+		}
+		
+		&.smaller-logo {
+			height:27px;
+			
+			@include respond-to(mobile-portrait) {
+				height:22px;
+				//margin-top:2px;
+			}
+			
 			display:none;
-			br {
-				display:none;
+		}
+	}
+}
+
+.show-project {
+	.logo {
+		img {
+			//height:15px;
+			//margin-top:1px;
+			display:none;
+			
+			&.smaller-logo {
+				//height:27px;
+				display:block;
 			}
 		}
 	}
 }
 
-.page-about {
-	header {
-		@include respond-to(mobile-portrait) {
-			span {
-				display:inline;
+
+.show-project {
+	.logo {
+		img {
+			//height:15px;
+			//margin-top:1px;
+			display:none;
+			
+			&.smaller-logo {
+				//height:27px;
+				display:block;
 			}
 		}
 		
-		@include respond-to(mobile-landscape) {
-			span {
-				display:inline;
+		&:hover {
+			img {
+				display:block;
+			
+				&.smaller-logo {
+					display:none;
+				}
+			}
+		}
+	}
+}
+
+.show-full-logo.show-project {
+	.logo {
+		img {
+			display:block;
+		
+			&.smaller-logo {
+				display:none;
 			}
 		}
 	}

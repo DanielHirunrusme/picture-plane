@@ -1,0 +1,125 @@
+.contact-main {
+	@include flexbox;
+	//@include align-items(center);
+	@include justify-content(flex-end);
+	@include flex-direction(column);
+	
+	@include respond-to(mobile-landscape) {
+		display:block;
+	}
+	
+	@include respond-to(mobile-portrait) {
+		display:block;
+	}
+	
+	
+	.wrap {
+		@include flexbox;
+		margin:0 !important;
+		
+		
+		@include respond-to(mobile-portrait) {
+			display:block;
+			padding-top:15vh;
+		}
+
+		@include respond-to(mobile-landscape) {
+			//display:block;
+			margin-top:100px !important;
+		}
+		
+		
+		div {
+			@include flexbox;
+			@include align-items(flex-end);
+			
+			//width:50%;
+			float:left;
+			margin-bottom:$g-tb-margin;
+			
+			a {
+				//margin-bottom: .4em;
+				display: block;
+				border:none;
+				
+				@include respond-to(mobile-portrait) {
+					border:none;
+					margin-bottom: 0;
+				}
+
+				@include respond-to(mobile-landscape) {
+					border:none;
+					margin-bottom: 0;
+				}
+			}
+			
+			&:first-child {
+				width:100%;
+			}
+		}
+		
+		padding-bottom:0;
+	}
+	
+	p {
+		@include font-size($body-small-font-sizes); 
+		@include line-height($body-small-line-height); 
+		
+		@include respond-to(mobile-portrait) {
+			line-height:19px;
+			a + br {
+				display:none;
+			}
+		}
+
+		@include respond-to(mobile-landscape) {
+			line-height:19px;
+			a + br {
+				display:none;
+			}
+		}
+	}
+}
+
+#map {
+	height:50vh;
+	min-height:300px;
+	width:calc(100% - 160px);
+	margin-left:$g-lr-margin * 2;
+	margin-bottom:$g-lr-margin * 2;
+	
+	@include respond-to(mobile-portrait) {
+		width:calc(100% - 40px);
+		margin-left:$g-lr-margin/2;
+		margin-bottom:$g-lr-margin/2;
+		height:25vh;
+	}
+
+	@include respond-to(mobile-landscape) {
+		width:calc(100% - 40px);
+		margin-left:$g-lr-margin/2;
+		margin-bottom:$g-lr-margin/2;
+	}
+}
+
+.map {
+	height:40vh;
+	min-height:300px;
+	width:calc(100% - 160px);
+	margin-left:$g-lr-margin * 2;
+	margin-bottom:$g-lr-margin * 2;
+	
+	
+	
+	@include respond-to(mobile-tablet) {
+		margin-left:$g-lr-margin;
+		width:calc(100% - 80px);
+	}
+	
+	iframe {
+		background-color: $c-theme;
+		background-blend-mode: multiply;
+	}
+	background-color: $c-theme;
+	background-blend-mode: multiply;
+}

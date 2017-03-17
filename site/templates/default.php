@@ -1,13 +1,11 @@
 <?php snippet('header') ?>
 
-  <main class="main" role="main">
+  <main class="main main-<?= $page->uri() ?>" role="main" data-page="default">
 
     <header class="wrap">
-      <h1><?= $page->title()->html() ?></h1>
       <div class="intro text">
         <?= $page->intro()->kirbytext() ?>
       </div>
-      <hr />
     </header>
       
     <div class="text wrap">

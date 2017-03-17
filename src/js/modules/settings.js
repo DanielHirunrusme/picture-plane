@@ -4,14 +4,15 @@
  */
 
 var settings = module.exports = {
-	page: $('body').data('page').split('page-').join(),
+	page: $('.main').data('page'),
 	prevPage: '',
 	currentProject: 0,
 	animating:false,
 	init: true,
-	currImage: Number($('.curr-num').text() - 1),
+	currImage: 0,
 	totalImages: 0,
-	isMobile: false
+	isMobile: false,
+	url: $('body').data('url')
 };
 
 settings.page = settings.page;
@@ -19,3 +20,4 @@ settings.currentProject = settings.currentProject;
 settings.animating = settings.animating;
 settings.init = settings.init;
 settings.currImage = settings.currImage;
+settings.url = settings.url;

@@ -4,7 +4,10 @@ var uglify = require( "gulp-uglify" );
 var sourcemaps = require( "gulp-sourcemaps" );
 
 var vendorScripts = [
-	"./node_modules/barba.js/dist/barba.min.js"
+	"./node_modules/barba.js/dist/barba.min.js",
+	"vendors/masonry.js",
+	"vendors/imagesLoaded.js",
+	"vendors/jquery.mobile.custom.min.js"
 ];
 
 

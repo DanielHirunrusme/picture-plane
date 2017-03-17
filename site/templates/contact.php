@@ -1,17 +1,23 @@
 <?php snippet('header') ?>
 
-  <main class="main" role="main">
-    
+  <main class="main contact-main" role="main" data-page="default" >
+	
     <header class="wrap">
-      <h1><?= $page->title()->html() ?></h1>      
+  
       <div class="intro text">
         <?= $page->intro()->kirbytext() ?>
-      </div>    
-      <hr />      
+      </div>       
+	  
+      <div class="contact-information text">
+        <?= $page->text()->kirbytext() ?>
+      </div>
+	  
+	    
     </header>
     
+	<?php
+	/*
     <div class="wrap wide">
-      <h2>Get in Touch</h2>
       
       <ul class="contact-options">
         <?php foreach($page->contactoptions()->toStructure() as $item): ?>
@@ -31,11 +37,117 @@
         <?php endforeach ?>
       </ul>
     </div>
-      
-    <div class="contact-twitter text wrap cf">
-      <?= $page->text()->kirbytext() ?>
-    </div>
+      */
+	?>
     
+	
+    <div id="map" data-module-init="contact" data-long="<?= $page->map_longitude() ?>" data-lat="<?= $page->map_latitude() ?>" data-zoom="<?= $page->map_zoom() ?>">
+    
+    </div>
+	<?php
+	/*
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2QGsYctdtgUz0_omARYyiNXmIv50PpXw&callback=initMap"></script>
+	<script type="text/javascript">
+		var user_lat,user_lng;
+		var map;
+		function initMap() {
+			map = new google.maps.Map(document.getElementById('map'), {
+				center: {lat:<?= $page->map_latitude() ?>, lng: <?= $page->map_longitude() ?>},
+				zoom: <?= $page->map_zoom() ?>,
+				panControl: false,
+  			  streetViewControl: false,
+  			  mapTypeId: google.maps.MapTypeId.ROADMAP,
+				disableDefaultUI: true,   //disables controls
+				styles: [
+	            {elementType: 'geometry', stylers: [{color: '#D3D1CA'}]},
+	            {elementType: 'labels.text.stroke', stylers: [{color: 'transparent'}]},
+	            {elementType: 'labels.text.fill', stylers: [{color: '#000000'}]},
+	            {
+	              featureType: 'administrative.locality',
+	              elementType: 'labels.text.fill',
+	              stylers: [{color: '#000000'}]
+	            },
+	            {
+	              featureType: 'poi',
+	              elementType: 'labels.text.fill',
+	              stylers: [{color: '#000000'}]
+	            },
+	            {
+	              featureType: 'poi.park',
+	              elementType: 'geometry',
+	              stylers: [{color: '#C2E6C0'}]
+	            },
+	            {
+	              featureType: 'poi.park',
+	              elementType: 'labels.text.fill',
+	              stylers: [{color: '#000000'}]
+	            },
+	            {
+	              featureType: 'road',
+	              elementType: 'geometry',
+	              stylers: [{color: '#EBE9E1'}]
+	            },
+	            {
+	              featureType: 'road',
+	              elementType: 'geometry.stroke',
+	              stylers: [{color: '#D3D1CA'}]
+	            },
+	            {
+	              featureType: 'road',
+	              elementType: 'labels.text.fill',
+	              stylers: [{color: '#000000'}]
+	            },
+	            {
+	              featureType: 'road.highway',
+	              elementType: 'geometry',
+	              stylers: [{color: '#EBE9E1'}]
+	            },
+	            {
+	              featureType: 'road.highway',
+	              elementType: 'geometry.stroke',
+	              stylers: [{color: '#EBE9E1'}]
+	            },
+	            {
+	              featureType: 'road.highway',
+	              elementType: 'labels.text.fill',
+	              stylers: [{color: '#000000'}]
+	            },
+	            {
+	              featureType: 'transit',
+	              elementType: 'geometry',
+	              stylers: [{color: '#AAA8A1'}]
+	            },
+	            {
+	              featureType: 'transit.station',
+	              elementType: 'labels.text.fill',
+	              stylers: [{color: '#d59563'}]
+	            },
+	            {
+	              featureType: 'water',
+	              elementType: 'geometry',
+	              stylers: [{color: '#B6D0E0'}]
+	            },
+	            {
+	              featureType: 'water',
+	              elementType: 'labels.text.fill',
+	              stylers: [{color: '#000000'}]
+	            },
+	            {
+	              featureType: 'water',
+	              elementType: 'labels.text.stroke',
+	              stylers: [{color: '#EBE9E1'}]
+	            }
+	          ]
+		});
+		var marker = new google.maps.Marker({
+			position: {lat:<?= $page->map_latitude() ?>, lng: <?= $page->map_longitude() ?>},
+			map: map,
+			title: 'Studio H'
+		}); 
+		}
+	</script>
+	*/
+	?>
   </main>
 
 <?php snippet('footer') ?>

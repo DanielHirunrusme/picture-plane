@@ -25,10 +25,15 @@
 @import "modules/section";
 
 //partials
+@import "partials/hero";
 @import "partials/menu";
+@import "partials/notification";
+@import "partials/projects";
 
 //templates
 @import "templates/about";
+@import "templates/clients";
+@import "templates/contact";
 @import "templates/error";
 @import "templates/index";
 @import "templates/project";

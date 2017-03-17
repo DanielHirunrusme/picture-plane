@@ -1,0 +1,37 @@
+.main-clients {
+	p, li, h3 {
+		@include font-size($body-small-font-sizes); 
+		@include line-height($body-small-line-height); 
+	}
+	
+	li {
+		list-style:none;
+	}
+	
+	.wrap {
+		@include flexbox;
+		@include flex-wrap(wrap);
+		@include flex-direction(row);
+	
+	}
+	.client-list {
+		width:calc(50% - 40px);
+		float:left;
+		
+		margin-right:$g-lr-margin;
+		min-width:220px;
+		
+		@include respond-to(mobile-portrait) {
+			width:100%;
+		}
+		
+		&:last-child {
+			margin-right:0;
+		}
+		p {
+			margin:0 !important;
+			padding:0;
+			white-space:nowrap;
+		}
+	}
+}

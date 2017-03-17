@@ -28,3 +28,7 @@ make Kirby work. For more fine-grained configuration
 of the system, please check out http://getkirby.com/docs/advanced/options
 
 */
+
+
+c::set('plugin.oembed.video.autoplay', true);
+c::set('plugin.oembed.video.lazyload', fale);

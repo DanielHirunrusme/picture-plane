@@ -1,201 +1,114 @@
-.page-project {
-	main {
-		position: absolute;
-	    width: 100%;
-	    height: 100%;
-		margin:0;
+.project-description {
+	position:fixed;
+	width:100%;
+	left:0;
+	bottom:$g-tb-margin * 2;
+	padding:0;
+	text-align:center;
+	z-index:99;
+	
+	@include respond-to(mobile-landscape) {
+	   bottom:$g-tb-margin;
+	}
+	
+	&.video-description {
+		h2, h3 {
+			margin-right:120px;
+			
+			@include respond-to(mobile-portrait) {
+				margin-right:50px;
+			}
+		}
+	}
+	
+	h3 {
+		//margin-top:.5em;
+	}
+}
+
+.main-project {
+	
+	background:$c-white;
+	width:100vw;
+	
+	
+	.kirby-plugin-oembed {
+	    position: relative;
+	    padding: 0 !important;
+	    top: 50%;
+	    margin-left: 80px;
+	    margin-right: 180px;
+	    height: 80%;
+		display:none;
+	}
+	
+	
+	.project-images {
+		position:absolute;
+	    top: 12.5%;
+	    height: 75%;
+	    //width: 10000px;
+		left:0;
 		
 		@include respond-to(mobile-portrait) {
-			margin:$g-mobile-tb-margin $g-mobile-lr-margin;
-			position:relative;
-			width:auto;
-			height:auto;
+			
 		}
-		
+
 		@include respond-to(mobile-landscape) {
-			margin:$g-mobile-tb-margin $g-mobile-lr-margin;
-			position:relative;
-			width:auto;
-			height:auto;
+		    top: 12%;
+		    height: 70%;
 		}
 		
-		.project-information {
-			@include transition(.1s opacity);
-			@extend .noselect;
-			position:absolute;
-			bottom:$g-tb-margin;
-			left:30vw;
-			z-index:2;
-			@include opacity(1);
-			pointer-events:none;
-			
-			@include respond-to(mobile-portrait) {
-				position:fixed;
-				left:30vw;
-				
-				.count {
-					display:none;
-				}
-			}
-			
-			@include respond-to(mobile-landscape) {
-				position:fixed;
-				left:30vw;
-				
-				.count {
-					display:none;
-				}
-			}
-	
-			.count {
-			    top: -.5em;
-			    position: relative;
-				
-				@include font-size($body-small-font-sizes); 
-				@include line-height($body-small-line-height); 
-				
-				span {
-					@include font-size($body-small-font-sizes); 
-					@include line-height($body-small-line-height); 
-				}
-			}
-		}
-
-		.project-images {
-			//background:url(../images/arrow.png);
-			position:absolute;
-			width:100%;
-			height:100%;
-			top:0;
+	   
+		
+		figure {
+			@include flexbox;
+			@include align-items(center);
+		    position: absolute;
+		    top: 0;
 			left:0;
-			z-index:1;
-			
-			@include respond-to(mobile-portrait) {
-				//margin:$g-mobile-tb-margin $g-mobile-lr-margin;
-				position:relative;
-				width:auto;
-				height:auto;
-				margin-bottom:$g-mobile-tb-margin * 4;
-			}
-			
-			
-			@include respond-to(mobile-landscape) {
-				//margin:$g-mobile-tb-margin $g-mobile-lr-margin;
-				position:relative;
-				width:auto;
-				height:auto;
-				margin-bottom:$g-mobile-tb-margin * 4;
-			}
-			
-			&.next-image {
-				cursor:url("../images/arrow.png") 45 10, auto;
-			}
-			
-			&.on-last {
-				cursor:url("../images/close.png") 17 17, auto;
-			}
-			
-			
-			
-			figure {
-				
-				text-align:center;
-				position:absolute;
-				background-blend-mode: overlay;
-				background-blend-mode: luminosity;
-				background-size:cover;
-				background-position:center center;
-				background-repeat:no-repeat;
-				@include opacity(0);
-				will-change: width, height, left, top, background, right, transform;
-				
-				@include respond-to(mobile-portrait) {
-					position:relative;
-					width:100% !important;
-					height:auto !important;
-					top:auto !important;
-					right:auto !important;
-					margin-bottom:$g-mobile-tb-margin * 2;
-					@include opacity(1);
-					
-					img {
-						width:100% !important;
-					}
-				}
-				
-				@include respond-to(mobile-landscape) {
-					position:relative;
-					width:100% !important;
-					height:auto !important;
-					top:auto !important;
-					right:auto !important;
-					margin-bottom:$g-mobile-tb-margin * 2;
-					@include opacity(1);
-					
-					img {
-						width:100% !important;
-					}
-				}
-
-				&.hidden {
-					@include opacity(0);
-				}
-				
-				&.load {
-					@include opacity(1);
-				}
-				
-				&.show {
-					@include transition(.8s all);
-					transition-property: width, height, left, top, background, right, transform;
-					
-					//@include transition(2s width);
-					//@include transition(2s height);
-					//@include opacity(1);
-					background-color:transparent !important;
-				}
-				
-				&.index {
-					@include transition(.4s all);
-					//background-color:inherit !important;
-				}
-				
-				img {
-					@include opacity(0)
-				}
-				
-				&.figure-portrait {
-					height:80%;
-					
-					img {
-						//@include opacity(0);
-						height:100%;
-						
-						&.show {
-							//@include opacity(1);
-						}
-					}
-				}
-				
-				&.figure-landscape {
-					width:50vw;
-					
-					img {
-						width:100%;
-					}
-				}
-		
-				
-			}
-		}
-	}
-}
-
-
-.show-index {
-	main {
-		.project-information {
+			float:left;
+		    height: 100%;
+			margin-right:$g-lr-margin * 2;
 			@include opacity(0);
+			
+			&:last-child {
+				margin-right:0;
+			}
+			
+			&.show {
+				@include opacity(1);
+			}
+			
+			&.next {
+				cursor:e-resize;
+			}
+			
+			&.prev {
+				cursor:w-resize;
+			}
+			
+			&:last-child {
+				&:hover {
+					cursor:w-resize;
+				}
+			}
+			
+			img {
+				height:100%;
+				width:auto;
+				float:left;
+
+				&.square {
+					height:100%;
+					width:auto;
+				}
+				
+				&.smaller-landscape {
+					//width:90vw;
+					height:auto;
+				}
+			}
 		}
 	}
 	
@@ -203,16 +116,9 @@
 
 
 
-.cursor {
-	position:relative;
-	pointer-events:none;
-	z-index:99999;
-	margin-left:-50px;
-	width:100px;
-	margin-top:-50px;
-	
-	svg {
-		//width:100%;
+.show-project.project-in {
+	#barba-wrapper {
+		@include transition(.1s transform);
+		@include transform(translate(0px, 0));
 	}
 }
-

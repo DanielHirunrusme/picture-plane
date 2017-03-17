@@ -23,8 +23,12 @@ $animation-speed: 0.2s;
 //gutters+margins
 $padding:20px;
 
-$g-lr-margin:2vw;
-$g-tb-margin:3vh;
+$g-lr-margin:40px;
+$g-tb-margin:20px;
+
+$g-lr-mobile-margin:20px;
+$g-tb-mobile-margin:20px;
+
 
 $g-mobile-lr-margin:6vw;
 $g-mobile-tb-margin:3vh;
@@ -46,6 +50,7 @@ $c-orange:rgb(255, 80, 0);
 $c-overlay-blue:#092647;
 $c-deactivated-text:#919191;
 $c-global:$c-dark-gray;
+$c-theme:#F3F2ED;
 
 //font sizes
 $f-global-size:2vw;
@@ -103,28 +108,28 @@ $body-line-height: (
 */
 
 $body-font-sizes: (
-  null  : 16px,
-  $break-ipad : 1.8142vw,
-  $break-laptop : 1.8142vw,
-  $break-desktop: 1.8142vw
+  null  : 18px,
+  $break-ipad : 20px,
+  $break-laptop : 1.55vw,
+  $break-desktop: 1.55vw
 );
 
 $body-line-height: (
-  null  : 18px,
+  null  : 20px,
   $break-ipad : 1.1,
-  $break-laptop : 1.1,
-  $break-desktop: 1.1
+  $break-laptop : 1.16,
+  $break-desktop: 1.16
 );
 
 $body-small-font-sizes: (
-  null  : 22px,
-  $break-ipad : 1vw,
-  $break-laptop : 1vw,
-  $break-desktop: 1vw
+  null  : 18px,
+  $break-ipad : 18px,
+  $break-laptop : 20px,
+  $break-desktop: 20px
 );
 
 $body-small-line-height: (
-  null  : 18px,
+  null  : 22px,
   $break-ipad : 1.1,
   $break-laptop : 1.1,
   $break-desktop: 1.1
@@ -133,9 +138,16 @@ $body-small-line-height: (
 
 $h1-font-sizes: (
   null  : 14px,
-  $break-ipad : 1.523vw,
-  $break-laptop : 1.523vw,
-  $break-desktop: 1.523vw
+  $break-ipad : 14pt,
+  $break-laptop : 14pt,
+  $break-desktop: 14pt
+);
+
+$h3-font-sizes: (
+  null  : 9pt,
+  $break-ipad : 10pt,
+  $break-laptop : 10pt,
+  $break-desktop: 10pt
 );
 
 $h1-line-height: (
